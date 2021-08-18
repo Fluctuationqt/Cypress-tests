@@ -17,3 +17,6 @@ jobs:
         with:
           # Specify Browser since container image is compile with Firefox
           browser: chrome
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
