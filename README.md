@@ -32,7 +32,7 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
-4. Login to the [Cypress Dashboard](https://dashboard.cypress.io/) and get your **Record Key**
+4. Login to the [Cypress Dashboard](https://dashboard.cypress.io/) and follow the steps to get your **Record Key**
 5. Create a **GitHub Secret** named **CYPRESS_RECORD_KEY**
 6. Add the **ProjectID** from the Cypress Dashboard to **cypress.json**
 
