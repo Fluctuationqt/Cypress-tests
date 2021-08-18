@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     # image with firefox and chrome installed
     container:
-      image: cypress/browsers:node12.16.1-chrome80-ff73
+      image: cypress/browsers:node14.17.0-chrome91-ff89
       options: --user 1001
     steps:
       - name: Checkout
