@@ -16,7 +16,15 @@
  * @type {Cypress.PluginConfig}
  */
 // eslint-disable-next-line no-unused-vars
+// need to install the "del" module as a dependency
+// npm i del --save-dev
+
 module.exports = (on, config) => {
-  // `on` is used to hook into various events Cypress emits
-  // `config` is the resolved Cypress config
+  on('after:spec', (spec, results) => {
+    if (results && results.stats.failures === 0 && results.video) {
+      // `del()` returns a promise, so it's important to return it to ensure
+      // deleting the video is finished before moving on
+      console.log(results.video);
+    }
+  })
 }
